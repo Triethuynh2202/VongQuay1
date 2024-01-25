@@ -144,25 +144,28 @@
           let prizeIndex = null;
           console.log(rand);
           switch (true) {
-            case rand < prizes[6].percentpage:
+            case rand < prizes[7].percentpage:
+              prizeIndex = 7 ;
+              break;
+            case rand < prizes[7].percentpage + prizes[6].percentpage:
               prizeIndex = 6 ;
               break;
-            case rand < prizes[6].percentpage + prizes[5].percentpage:
+            case rand < prizes[7].percentpage + prizes[6].percentpage + prizes[5].percentpage:
               prizeIndex = 5 ;
               break;
-            case rand < prizes[6].percentpage + prizes[5].percentpage + prizes[4].percentpage:
+            case rand < prizes[7].percentpage + prizes[6].percentpage + prizes[5].percentpage + prizes[4].percentpage:
               prizeIndex = 4 ;
               break;
-            case rand < prizes[6].percentpage + prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage:
-              prizeIndex = 3 ;
+            case rand < prizes[7].percentpage + prizes[6].percentpage + prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage:
+              prizeIndex = 3;
               break;
-            case rand < prizes[6].percentpage + prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage:
+            case rand < prizes[7].percentpage + prizes[6].percentpage + prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage:
               prizeIndex = 2;
               break;
-            case rand < prizes[6].percentpage + prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage + prizes[1].percentpage:
+            case rand < prizes[7].percentpage + prizes[6].percentpage + prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage + prizes[1].percentpage:
               prizeIndex = 1;
-              break;
-            case rand < prizes[6].percentpage + prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage + prizes[1].percentpage + prizes[0].percentpage:
+              break; 
+            case rand < prizes[7].percentpage + prizes[6].percentpage + prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage + prizes[1].percentpage + prizes[0].percentpage:
               prizeIndex = 0;
               break;  
 
