@@ -40,52 +40,38 @@
       var isPercentage = true;
       var prizes = [
                                {
-                text: "Hẹn bạn lần sau",
+                text: "Ưu đãi học phí nhập học 50%",
                 img: "images/hengaplai.png",
-                percentpage: 0.15 // 30%
+                percentpage: 0 // 30%
               },
               {
-                text: "Gấu bong",
+                text: "Ưu đãi học phí nhập học 20%",
                 img: "images/GB.png",
                 number: 1, // 1%,
-                percentpage: 0.1 // 5%
+                percentpage: 0 // 5%
               },
               {
-                text: "Bình nước ITC",
+                text: "Baby Three",
                 img: "images/bn.png" ,
                 number: 1,
-                percentpage: 0.1 // 5%
+                percentpage: 0 // 5%
               },
               {
-                text: "Quay lần nữa",
+                text: "Ba lô",
                 img: "images/quaylannua.png",
                 number : 1,
-                percentpage: 0.2 // 10%
+                percentpage: 0 // 10%
               },
               {
-                text: "Hẹn bạn lần sau",
+                text: "Chúc bạn thi đạt kết quả cao",
                 img: "images/hengaplai.png",
-                percentpage: 0.15 // 10%
+                percentpage: 0.5 // 10%
               },
               {
-                text: "Bộ hồ sơ xét tuyển",
+                text: "Chúc bạn may mắn lần sau",
                 img: "images/hsxt.png",
-                percentpage: 0 // 20%
-              },
-              {
-                text: "Quạt ITC",
-                img: "images/quat.png",
-                number : 1,
-                percentpage: 0.2 // 20%
-              },
-              {
-                text: "Check in nhận quà",
-                img: "images/check.png",
-                number : 1,
-                percentpage: 0.1 // 20%
-              },
-
-
+                percentpage: 0.5 // 20%
+              }
             ];
       document.addEventListener(
         "DOMContentLoaded",
@@ -142,31 +128,24 @@
           let prizeIndex = null;
           console.log(rand);
           switch (true) {
-            case rand < prizes[7].percentpage:
-              prizeIndex = 7 ;
-              break;
-            case rand < prizes[7].percentpage + prizes[6].percentpage:
-              prizeIndex = 6 ;
-              break;
-            case rand < prizes[7].percentpage + prizes[6].percentpage + prizes[5].percentpage:
+            case rand < prizes[5].percentpage:
               prizeIndex = 5 ;
               break;
-            case rand < prizes[7].percentpage + prizes[6].percentpage + prizes[5].percentpage + prizes[4].percentpage:
+            case rand < prizes[5].percentpage + prizes[4].percentpage:
               prizeIndex = 4 ;
               break;
-            case rand < prizes[7].percentpage + prizes[6].percentpage + prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage:
-              prizeIndex = 3;
+            case rand < prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage:
+              prizeIndex = 3 ;
               break;
-            case rand < prizes[7].percentpage + prizes[6].percentpage + prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage:
-              prizeIndex = 2;
+            case rand < prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage:
+              prizeIndex = 2 ;
               break;
-            case rand < prizes[7].percentpage + prizes[6].percentpage + prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage + prizes[1].percentpage:
+            case rand < prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage + prizes[1].percentpage:
               prizeIndex = 1;
-              break; 
-            case rand < prizes[7].percentpage + prizes[6].percentpage + prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage + prizes[1].percentpage + prizes[0].percentpage:
+              break;
+            case rand < prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage + prizes[1].percentpage + prizes[0].percentpage:
               prizeIndex = 0;
-              break;  
-
+              break;
           }
           if(prizes[prizeIndex].number != 0){
             prizes[prizeIndex].number = prizes[prizeIndex].number - 1
