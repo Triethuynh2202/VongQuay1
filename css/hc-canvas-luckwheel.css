@@ -135,3 +135,6 @@ body{ margin:0; padding:0; height:100vh; width:100%; }
   height: 150px;
   float: right;
 }
+.hc-luckywheel-canvas {
+    background-color: #1E90FF !important; /* Xanh biển */
+}
