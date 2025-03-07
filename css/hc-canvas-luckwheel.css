@@ -23,7 +23,7 @@
   height: inherit;
   border-radius: inherit;
   background-clip: padding-box;
-  background-color: #ffcb3f;
+  background: #1E90FF !important; /* Màu xanh biển */
   -webkit-transition: transform 6s ease;
   transition: transform 6s ease;
 }
