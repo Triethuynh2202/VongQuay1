@@ -40,38 +40,63 @@
       var isPercentage = true;
       var prizes = [
               {
-                text: "Chúc bạn thi đạt kết quả cao",
+                text: "Chúc bạn may mắn lần sau",
                 img: "images/hengaplai.png",
-                percentpage: 0.5 // 10%
+                percentpage: 0.26 // 10%
               },
               {
                 text: "Ưu đãi học phí nhập học 50%",
-                img: "images/hengaplai.png",
+                img: "images/50.png",
                 percentpage: 0 // 30%
               },
-              {
-                text: "Ưu đãi học phí nhập học 20%",
-                img: "images/GB.png",
-                number: 1, // 1%,
-                percentpage: 0 // 5%
-              },
+
               {
                 text: "Baby Three",
                 img: "images/baby.png" ,
                 number: 1,
-                percentpage: 0 // 5%
+                percentpage: 0.01 // 5%
               },
               {
                 text: "Ba lô",
                 img: "images/balo1.png",
                 number : 1,
-                percentpage: 0 // 10%
+                percentpage: 0.03 // 10%
               },
 
               {
-                text: "Chúc bạn may mắn lần sau",
+                text: "Bìa hồ sơ xét tuyển",
                 img: "images/hsxt.png",
-                percentpage: 0.5 // 20%
+                percentpage: 0.1 // 10%
+              },
+              {
+                text: "Gấu Bong",
+                img: "images/GB.png",
+                number: 1, // 1%,
+                percentpage: 0.12 // 12%
+              },
+              {
+                text: "Ưu đãi học phí nhập học 20%",
+                img: "images/20.png",
+                number: 1, // 1%,
+                percentpage: 0 // 5%
+              },
+              {
+                text: "Bao lì xì",
+                img: "images/baby.png" ,
+                number: 1,
+                percentpage: 0.08 // 8%
+              },
+              {
+                text: "Bình nước",
+                img: "images/binhnuoc.png",
+                number : 1,
+                percentpage: 0.15 // 15%
+              },
+
+              {
+                text: "Check in nhận quà",
+                img: "images/hsxt.png",
+                percentpage: 0.25 // 25%
               }
             ];
       document.addEventListener(
@@ -129,22 +154,34 @@
           let prizeIndex = null;
           console.log(rand);
           switch (true) {
-            case rand < prizes[5].percentpage:
-              prizeIndex = 5 ;
+            case rand < prizes[9].percentpage:
+              prizeIndex = 9 ;
               break;
-            case rand < prizes[5].percentpage + prizes[4].percentpage:
-              prizeIndex = 4 ;
+            case rand < prizes[9].percentpage + prizes[8].percentpage:
+              prizeIndex = 8 ;
               break;
-            case rand < prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage:
-              prizeIndex = 3 ;
+            case rand < prizes[9].percentpage + prizes[8].percentpage + prizes[7].percentpage:
+              prizeIndex = 7 ;
               break;
-            case rand < prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage:
-              prizeIndex = 2 ;
+            case rand < prizes[9].percentpage + prizes[8].percentpage + prizes[7].percentpage + prizes[6].percentpage:
+              prizeIndex = 6 ;
               break;
-            case rand < prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage + prizes[1].percentpage:
+            case rand < prizes[9].percentpage + prizes[8].percentpage + prizes[7].percentpage + prizes[6].percentpage + prizes[5].percentpage:
+              prizeIndex = 5;
+              break;
+            case rand < prizes[9].percentpage + prizes[8].percentpage + prizes[7].percentpage + prizes[6].percentpage + prizes[5].percentpage + prizes[4].percentpage:
+              prizeIndex = 4;
+              break;
+            case rand < prizes[9].percentpage + prizes[8].percentpage + prizes[7].percentpage + prizes[6].percentpage + prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage:
+              prizeIndex = 3;
+              break;
+            case rand < prizes[9].percentpage + prizes[8].percentpage + prizes[7].percentpage + prizes[6].percentpage + prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage:
+              prizeIndex = 2;
+              break;
+            case rand < prizes[9].percentpage + prizes[8].percentpage + prizes[7].percentpage + prizes[6].percentpage + prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage + prizes[1].percentpage:
               prizeIndex = 1;
               break;
-            case rand < prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage + prizes[1].percentpage + prizes[0].percentpage:
+            case rand < prizes[9].percentpage + prizes[8].percentpage + prizes[7].percentpage + prizes[6].percentpage + prizes[5].percentpage + prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage + prizes[1].percentpage + prizes[0].percentpage:
               prizeIndex = 0;
               break;
           }
