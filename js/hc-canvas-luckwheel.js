@@ -113,9 +113,9 @@
       ctx.rotate((((360 / num) * i - rotateDeg) * Math.PI) / 180);
       ctx.arc(0, 0, 250, 0, (2 * Math.PI) / num, false); // Radius
       if (i % 2 == 0) {
-        ctx.fillStyle = "#ffb820";
+        ctx.fillStyle = "#FFFFFF";
       } else {
-        ctx.fillStyle = "#0000FF";
+        ctx.fillStyle = "#33FFFF";
       }
       ctx.fill();
       ctx.lineWidth = 1;
