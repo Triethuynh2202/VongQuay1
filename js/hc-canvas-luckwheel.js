@@ -49,7 +49,7 @@
     ctx = canvas.getContext("2d");
     
     for (var i = 0; i < num; i++) {
-      ctx.save(); ctx.beginPath(); ctx.translate(250, 250); ctx.moveTo(0, 0);
+      ctx.save(); ctx.beginPath(); ctx.translate(270, 250); ctx.moveTo(0, 0);
       ctx.rotate((((360 / num) * i - rotateDeg) * Math.PI) / 180);
       ctx.arc(0, 0, 250, 0, (2 * Math.PI) / num, false);
       ctx.fillStyle = i % 2 == 0 ? "#0000FF" : "#FFFFFF";
