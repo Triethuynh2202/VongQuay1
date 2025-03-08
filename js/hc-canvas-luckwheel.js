@@ -115,7 +115,7 @@
       if (i % 2 == 0) {
         ctx.fillStyle = "#ffb820";
       } else {
-        ctx.fillStyle = "#ffcb3f";
+        ctx.fillStyle = "#0000FF";
       }
       ctx.fill();
       ctx.lineWidth = 1;
