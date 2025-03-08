@@ -14,7 +14,7 @@
 
   top: 50%;
   left: 50%;
-  transform: translate(55%, 12%);
+  transform: translate(60%, -10%);
 }
 
 
@@ -125,10 +125,18 @@
 body{ margin:0; padding:0; height:100vh; width:100%; }
 
 .bg {
-  background-image: url('../images/BG.png');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-color: #ffcb3f;
+  background-image: url('../images/BG.png');  /* Hình nền */
+  background-repeat: no-repeat; /* Không lặp lại */
+  background-size: 100%; /* Đảm bảo ảnh nền phủ toàn bộ chiều rộng */
+
+  /* Điều chỉnh vị trí nền */
+  background-position: center bottom; /* Căn giữa theo chiều ngang, đẩy xuống dưới */
+
+  /* Nếu cần đẩy xuống sâu hơn, có thể chỉnh thêm */
+  background-position: center 100%; /* Đẩy xuống 10% so với vị trí mặc định */
+
+  /* Màu nền phụ phía sau ảnh */
+  background-color: #ffcb3f; 
 }
 #post{
   width: 600px;
