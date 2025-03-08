@@ -4,16 +4,19 @@
   padding: 0;
   list-style: none;
 }
-
 .hc-luckywheel {
   position: absolute; 
-  width: 500px; /*Change this when change size*/
-  height: 500px; /*Change this when change size*/
+  width: 500px; /* Đảm bảo kích thước đúng */
+  height: 500px; 
   border-radius: 50%;
   border: 16px solid #1E90FF; /* Màu xanh biển */
   box-shadow: 0 2px 3px #333, 0 0 2px #000;
-  left: 200px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 
 .hc-luckywheel-container {
   position: absolute;
