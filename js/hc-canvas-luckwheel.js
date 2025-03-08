@@ -126,12 +126,14 @@
       html.push('<li class="hc-luckywheel-item"> <span style="');
       html.push(transform + ": rotate(" + i * turnNum + 'turn)">');
       if (opts.mode == "both") {
-        html.push("<p id='curve'>" + prizeList[i].text + "</p>");
-        html.push('<img src="' + prizeList[i].img + '" />');
+          let textColor = i % 2 == 0 ? "#FFFF00" : "#0000FF"; // Vàng cho ô xanh, Xanh cho ô trắng
+          html.push("<p id='curve' style='color:" + textColor + ";'>" + prizeList[i].text + "</p>");
+          html.push('<img src="' + prizeList[i].img + '" />');
       } else if (prizeList[i].img) {
-        html.push('<img src="' + prizeList[i].img + '" />');
+          html.push('<img src="' + prizeList[i].img + '" />');
       } else {
-        html.push('<p id="curve">' + prizeList[i].text + "</p>");
+          let textColor = i % 2 == 0 ? "#FFFF00" : "#0000FF"; // Vàng cho ô xanh, Xanh cho ô trắng
+          html.push('<p id="curve" style="color:' + textColor + ';">' + prizeList[i].text + "</p>");
       }
       html.push("</span> </li>");
       if (i + 1 === num) {
