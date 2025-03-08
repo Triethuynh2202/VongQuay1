@@ -12,9 +12,9 @@
   border: 16px solid #1E90FF; /* Màu xanh biển */
   box-shadow: 0 2px 3px #333, 0 0 2px #000;
 
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top:100%;
+  left: 100%;
+  transform: translate(-90%, -50%);
 }
 
 
