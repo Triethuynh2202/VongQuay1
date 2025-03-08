@@ -151,3 +151,7 @@ body{ margin:0; padding:0; height:100vh; width:100%; }
 .hc-luckywheel-canvas {
     background-color: #1E90FF !important; /* Xanh biển */
 }
+.hc-luckywheel-container img {
+  width: 65px; /* Điều chỉnh kích thước ảnh */
+  height: auto; /* Giữ nguyên tỷ lệ */
+}
