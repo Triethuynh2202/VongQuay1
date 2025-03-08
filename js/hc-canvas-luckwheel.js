@@ -113,9 +113,9 @@
       ctx.rotate((((360 / num) * i - rotateDeg) * Math.PI) / 180);
       ctx.arc(0, 0, 250, 0, (2 * Math.PI) / num, false); // Radius
       if (i % 2 == 0) {
-        ctx.fillStyle = "#FFFFFF";
+          ctx.fillStyle = "#0000FF"; // Màu xanh
       } else {
-        ctx.fillStyle = "#33FFFF";
+          ctx.fillStyle = "#FFFFFF"; // Màu trắng
       }
       ctx.fill();
       ctx.lineWidth = 1;
